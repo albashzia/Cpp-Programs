@@ -1,19 +1,23 @@
-# CLion
-.idea/
-
-# CMake
-cmake-build-*/
+# Build output
 build/
-CMakeFiles/
-CMakeCache.txt
-compile_commands.json
-cmake_install.cmake
-Makefile
+
+# VS Code logs
+.vscode/*.log
 
 # Executables
 *.exe
+*.out
 
 # Object files
 *.o
 *.obj
+
+# Debug symbols
 *.pdb
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+Makefile
