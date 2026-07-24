@@ -1,6 +1,6 @@
 {
   "code-runner.executorMap": {
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && ./$fileNameWithoutExt.exe"
+    "cpp": "if (!(Test-Path \"${workspaceFolder}\\build\\bin\")) { New-Item -ItemType Directory -Path \"${workspaceFolder}\\build\\bin\" }; g++ \"$fullFileName\" -o \"${workspaceFolder}\\build\\bin\\$fileNameWithoutExt.exe\"; & \"${workspaceFolder}\\build\\bin\\$fileNameWithoutExt.exe\""
   },
   "code-runner.runInTerminal": true
 }
