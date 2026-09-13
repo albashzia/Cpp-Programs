@@ -15,6 +15,7 @@ file(GLOB_RECURSE CPP_FILES CONFIGURE_DEPENDS
     "${CMAKE_SOURCE_DIR}/stl/*.cpp"
     "${CMAKE_SOURCE_DIR}/dsa/*.cpp"
     "${CMAKE_SOURCE_DIR}/projects/*.cpp"
+    "${CMAKE_SOURCE_DIR}/loops/*.cpp"
 )
 
 foreach(FILE ${CPP_FILES})
