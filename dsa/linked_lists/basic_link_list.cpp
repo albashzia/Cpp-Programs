@@ -1,14 +1,19 @@
-class SinglyLinkedList {
+#include <stddef.h>
+
+class SingleLinkedList {
     struct Node {
         int a;
         Node * next;
     } * p;
 
-    SinglyLinkedList() {
-        p = nullptr;
+public:
+    void insertAtEnd();
+    void insertAtStart();
+    void display();
+    void search();
+    void deleteAtPosition();
+
+    SingleLinkedList() {
+        p = NULL;
     }
 };
-
-int main() {
-
-}
