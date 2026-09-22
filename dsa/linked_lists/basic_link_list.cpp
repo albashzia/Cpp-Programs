@@ -41,3 +41,22 @@ void SingleLinkedList::insertAtEnd() {
         q->next=t;
     }
 }
+
+void SingleLinkedList::insertAtStart() {
+    int x;
+    cout<<"Enter data to insert at start: ";
+    cin>>x;
+    Node *q,*t;
+    t = new Node;
+    t->data = x;
+    t->next = NULL;
+
+    if (p==NULL) {
+        p=t;
+        return;
+    }
+
+    q = p;
+    p = t;
+    p->next=q;
+}
