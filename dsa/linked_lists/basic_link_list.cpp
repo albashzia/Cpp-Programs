@@ -60,3 +60,16 @@ void SingleLinkedList::insertAtStart() {
     p = t;
     p->next=q;
 }
+
+void SingleLinkedList::display() {
+    Node *q = p;
+    if (p==NULL) {
+        cout<<"List is empty";
+        return;
+    }
+    while (q!=NULL) {
+        cout<<q->data<<endl;
+        q = q->next;
+    }
+    cout<<endl;
+}
