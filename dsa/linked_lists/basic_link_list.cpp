@@ -73,3 +73,23 @@ void SingleLinkedList::display() {
     }
     cout<<endl;
 }
+
+void SingleLinkedList::search() {
+    int pos = 0, x;
+    cout<<"Enter number to search: ";
+    cin>>x;
+    Node *q = p;
+    if (p==NULL) {
+        cout<<"List is empty";
+        return;
+    }
+    while (q!=NULL) {
+        if (q->data==x) {
+            cout<<"Found at position: "<<pos+1;
+            return;
+        }
+        pos++;
+        q = q->next;
+    }
+    cout<<endl;
+}
