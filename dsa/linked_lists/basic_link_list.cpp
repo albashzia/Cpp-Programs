@@ -2,12 +2,15 @@
 #include <iostream>
 using namespace std;
 
+//Define a class
 class SingleLinkedList {
+    //Create a structure called Node for Linked List
     struct Node {
-        int data;
-        Node * next;
-    } * p;
+        int data; //Data element of the Node
+        Node * next; //Next node address inside the Node
+    } * p; //Head pointer of the first node
 
+    //Function prototypes
 public:
     void insertAtEnd();
     void insertAtStart();
@@ -15,11 +18,13 @@ public:
     void search();
     void deleteAtPosition();
 
+    //Non-parameterized constructor
     SingleLinkedList() {
-        p = NULL;
+        p = NULL; //Initialise the head node as NULL initially
     }
 };
 
+//Function definition to insert at end
 void SingleLinkedList::insertAtEnd() {
     int x;
     cout<<"Enter value to insert at end: ";
@@ -42,6 +47,7 @@ void SingleLinkedList::insertAtEnd() {
     }
 }
 
+//Method definition to insert at start
 void SingleLinkedList::insertAtStart() {
     int x;
     cout<<"Enter data to insert at start: ";
@@ -61,6 +67,7 @@ void SingleLinkedList::insertAtStart() {
     p->next=q;
 }
 
+//Method definition to display the elements of the list
 void SingleLinkedList::display() {
     Node *q = p;
     if (p==NULL) {
@@ -74,6 +81,7 @@ void SingleLinkedList::display() {
     cout<<endl;
 }
 
+//Method to search an element from the list
 void SingleLinkedList::search() {
     int pos = 0, x;
     cout<<"Enter number to search: ";
