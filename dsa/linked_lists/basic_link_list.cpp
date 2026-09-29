@@ -17,6 +17,7 @@ public:
     void display();
     void search();
     void deleteAtPosition();
+    void deleteLast();
 
     //Non-parameterized constructor
     SingleLinkedList() {
@@ -137,4 +138,23 @@ void SingleLinkedList::deleteAtPosition() {
         }
     }
     cout<<"Element Deleted"<<endl;
+}
+
+void SingleLinkedList::deleteLast() {
+    Node *q,*r;
+    if (p==NULL) {
+        cout<<"List is empty";
+        return;
+    }
+    if (p->next==NULL) {
+        p=NULL;
+    }
+    r = p;
+    q = p;
+    while (q->next!=NULL) {
+        r = q->next;
+        q = q->next;
+    }
+    r->next=NULL;
+    delete q;
 }
