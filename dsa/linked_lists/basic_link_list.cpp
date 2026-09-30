@@ -140,21 +140,35 @@ void SingleLinkedList::deleteAtPosition() {
     cout<<"Element Deleted"<<endl;
 }
 
+//Method to delete last element from the singly linked list
 void SingleLinkedList::deleteLast() {
+
+    //Node declaration
     Node *q,*r;
+
+    //Check if the list exists or not
     if (p==NULL) {
         cout<<"List is empty";
         return;
     }
+
+    //Check if there is only one node in the linked list
     if (p->next==NULL) {
         p=NULL;
     }
+
+    //Temporary pointers
     r = p;
     q = p;
+
+    //Loop over the list until the last node is reached
     while (q->next!=NULL) {
         r = q->next;
         q = q->next;
     }
+    //Assigning NULL to the 2nd last node
     r->next=NULL;
+
+    //Delete the last node
     delete q;
 }
