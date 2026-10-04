@@ -174,8 +174,9 @@ void SingleLinkedList::deleteLast() {
     delete q;
 }
 
+//Method to delete the first element from the linked list
 void SingleLinkedList::deleteFirst (){
-    node*q;
+    Node*q;
     if(p==NULL){
         cout<<"List is empty"<<endl;
         return;
