@@ -17,3 +17,17 @@ public:
         p=NULL;
     }
 };
+
+void CircularList::insertAtFirst(int v) {
+    t = new Node;
+    t->data = v;
+    t->next = NULL;
+    if (p==NULL) {
+        p = t;
+        t->next = p;
+    }
+    else {
+        t->next = p->next;
+        p->next = t;
+    }
+}
