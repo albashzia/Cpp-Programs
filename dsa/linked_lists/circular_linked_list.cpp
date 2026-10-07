@@ -19,6 +19,7 @@ public:
 };
 
 void CircularList::insertAtFirst(int v) {
+    Node *t;
     t = new Node;
     t->data = v;
     t->next = NULL;
@@ -29,5 +30,20 @@ void CircularList::insertAtFirst(int v) {
     else {
         t->next = p->next;
         p->next = t;
+    }
+}
+
+void CircularList::insertAtLast(int v) {
+    Node *t;
+    t = new Node;
+    t->data = v;
+    if (p==NULL) {
+        p = t;
+        t->next = p;
+    }
+    else {
+        t->next = p->next;
+        p->next = t;
+        p = t;
     }
 }
