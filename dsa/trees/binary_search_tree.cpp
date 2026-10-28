@@ -10,4 +10,18 @@ class BinarySearchTree {
     BinarySearchTree() {
         root = NULL;
     }
+
+    void insertNode(Node*t, Node*newNode) {
+        if (root == NULL) {
+            root = new Node;
+            root->data = newNode->data;
+            root->left = NULL;
+
+        }
+        else {
+            Node *q;
+            q = new Node;
+
+        }
+    }
 };
