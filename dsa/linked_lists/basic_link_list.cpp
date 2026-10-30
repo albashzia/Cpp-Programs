@@ -113,7 +113,7 @@ void SingleLinkedList::deleteAtPosition() {
     }
     cout<<"Enter position to delete from: ";
     cin>>pos;
-    node*s,*q;
+    Node*s,*q;
     s = p;
     if(pos==1){
         p=s->next;
@@ -186,4 +186,11 @@ void SingleLinkedList::deleteFirst (){
         p=p->next;
         delete q;
     }
+}
+
+int main() {
+    SingleLinkedList sll;
+    sll.insertAtStart();
+    sll.insertAtStart();
+    sll.insertAtEnd();
 }
