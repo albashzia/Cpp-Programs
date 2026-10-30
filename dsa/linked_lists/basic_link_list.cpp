@@ -77,9 +77,10 @@ void SingleLinkedList::display() {
         return;
     }
     while (q!=NULL) {
-        cout<<q->data<<endl;
+        cout<<q->data<<"->";
         q = q->next;
     }
+    cout<<"END";
     cout<<endl;
 }
 
@@ -193,4 +194,5 @@ int main() {
     sll.insertAtStart();
     sll.insertAtStart();
     sll.insertAtEnd();
+    sll.display();
 }
