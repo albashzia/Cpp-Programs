@@ -91,18 +91,18 @@ void SingleLinkedList::search() {
     cin>>x;
     Node *q = p;
     if (p==NULL) {
-        cout<<"List is empty";
+        cout<<"List is empty"<<endl;
         return;
     }
     while (q!=NULL) {
         if (q->data==x) {
-            cout<<"Found at position: "<<pos+1;
+            cout<<"Found at position: "<<pos+1<<endl;
             return;
         }
         pos++;
         q = q->next;
     }
-    cout<<"Element " <<x<<" not found on any node in the list";
+    cout<<"Element " <<x<<" not found on any node in the list"<<endl;
 }
 
 //Method to delete an element from a specified position
@@ -198,7 +198,17 @@ int main() {
     SingleLinkedList sll;
     sll.insertAtStart();
     sll.insertAtStart();
+    sll.insertAtStart();
+    sll.display();
+    sll.insertAtEnd();
+    sll.insertAtEnd();
     sll.insertAtEnd();
     sll.display();
     sll.search();
+    sll.deleteAtPosition();
+    sll.display();
+    sll.deleteLast();
+    sll.display();
+    sll.deleteFirst();
+    sll.display();
 }
