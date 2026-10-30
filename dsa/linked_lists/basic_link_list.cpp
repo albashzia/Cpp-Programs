@@ -102,7 +102,7 @@ void SingleLinkedList::search() {
         pos++;
         q = q->next;
     }
-    cout<<endl;
+    cout<<"Element " <<x<<" not found on any node in the list";
 }
 
 //Method to delete an element from a specified position
@@ -195,4 +195,5 @@ int main() {
     sll.insertAtStart();
     sll.insertAtEnd();
     sll.display();
+    sll.search();
 }
