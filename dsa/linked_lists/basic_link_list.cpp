@@ -181,7 +181,11 @@ void SingleLinkedList::deleteFirst (){
     Node*q;
     if(p==NULL){
         cout<<"List is empty"<<endl;
-        return;
+    }
+    if (p->next==NULL) {
+        q = p;
+        p = NULL;
+        delete q;
     }
     else{
         q=p;
