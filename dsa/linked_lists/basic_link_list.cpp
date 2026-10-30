@@ -157,6 +157,7 @@ void SingleLinkedList::deleteLast() {
     //Check if there is only one node in the linked list
     if (p->next==NULL) {
         p=NULL;
+        return;
     }
 
     //Temporary pointers
@@ -165,7 +166,7 @@ void SingleLinkedList::deleteLast() {
 
     //Loop over the list until the last node is reached
     while (q->next!=NULL) {
-        r = q->next;
+        r = q;
         q = q->next;
     }
     //Assigning NULL to the 2nd last node
