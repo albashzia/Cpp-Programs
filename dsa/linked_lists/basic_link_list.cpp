@@ -127,7 +127,7 @@ void SingleLinkedList::deleteAtPosition() {
         }
         if(pos>0 && pos<=counter){
             q=p;
-            for(i=0;i<pos;i++){
+            for(i=1;i<pos;i++){
                 t=q;
                 q=q->next;
             }
