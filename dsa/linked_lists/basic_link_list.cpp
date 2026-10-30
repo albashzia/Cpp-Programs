@@ -156,6 +156,8 @@ void SingleLinkedList::deleteLast() {
 
     //Check if there is only one node in the linked list
     if (p->next==NULL) {
+        q = p;
+        delete q;
         p=NULL;
         return;
     }
