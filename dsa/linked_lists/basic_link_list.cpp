@@ -109,33 +109,33 @@ void SingleLinkedList::search() {
 void SingleLinkedList::deleteAtPosition() {
     int pos, i, counter = 0;
     if(p==NULL){
-        cout<<"Empty";
+        cout<<"Empty"<<endl;
         return;
     }
     cout<<"Enter position to delete from: ";
     cin>>pos;
-    Node*s,*q;
-    s = p;
+    Node*q,*t;
+    q = p;
     if(pos==1){
-        p=s->next;
-        delete s;
+        p=q->next;
+        delete q;
     }
     else{
-        while(s!=NULL){
-            s = s->next;
+        while(q!=NULL){
+            q = q->next;
             counter++;
         }
         if(pos>0 && pos<=counter){
-            s=p;
+            q=p;
             for(i=0;i<pos;i++){
-                q=s;
-                s=s->next;
+                t=q;
+                q=q->next;
             }
-            q->next=s->next;
-            delete s;
+            t->next=q->next;
+            delete q;
         }
         else{
-            cout<<"Position out of range";
+            cout<<"Position out of range"<<endl;
             return;
         }
     }
