@@ -15,6 +15,7 @@ public:
     void insertAtLast(int);
     void insertAtPosition(int,int);
     void display();
+    void deleteFirst();
 
     CircularList() {
         p=NULL;
@@ -116,6 +117,22 @@ void CircularList::display() {
     cout<<q->data<<"->END"<<endl;
 }
 
+void CircularList::deleteFirst() {
+    if (p==NULL) {
+        cout<<"Empty"<<endl;
+        return;
+    }
+    if (p->next==p) {
+        Node*q = p;
+        delete q;
+        p = NULL;
+        return;
+    }
+    Node*q = p->next;
+    p->next = q->next;
+    delete q;
+}
+
 int main() {
     CircularList cll;
     cll.insertAtLast(3);
@@ -125,5 +142,7 @@ int main() {
     cll.insertAtFirst(1);
     cll.insertAtPosition(1,0);
     cll.insertAtLast(6);
+    cll.display();
+    cll.deleteFirst();
     cll.display();
 }
