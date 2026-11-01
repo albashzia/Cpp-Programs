@@ -1,4 +1,7 @@
 #include <wchar.h>
+#include <iostream>
+
+using namespace std;
 
 class DoublyLinkedList {
 
@@ -14,6 +17,7 @@ class DoublyLinkedList {
 
     void insertAtFirst(int);
     void insertAtLast(int);
+    void display();
 };
 
 void DoublyLinkedList::insertAtFirst(int v) {
@@ -51,4 +55,17 @@ void DoublyLinkedList::insertAtLast(int v) {
     }
     q->next = t;
     t->prev = q;
+}
+
+void DoublyLinkedList::display() {
+    if (p==NULL) {
+        cout<<"List is empty"<<endl;
+        return;
+    }
+    Node*q = p;
+    while (q != NULL) {
+        cout<<q->data<<"->";
+        q = q->next;
+    }
+    cout<<"END"<<endl;
 }
