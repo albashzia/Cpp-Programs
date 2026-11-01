@@ -98,3 +98,20 @@ void CircularList::insertAtPosition(int pos, int v) {
         p = t;
     }
 }
+
+void CircularList::display() {
+    if (p==NULL) {
+         cout<<"List is empty"<<endl;
+         return;
+     }
+    if (p->next == p) {
+        cout<<p->data<<"-> END"<<endl;
+        return;
+    }
+    Node *q = p->next;
+    while (q != p) {
+        cout<<q->data<<"->";
+        q = q->next;
+    }
+    cout<<q->data<<"->END"<<endl;
+}
