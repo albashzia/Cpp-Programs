@@ -115,3 +115,15 @@ void CircularList::display() {
     }
     cout<<q->data<<"->END"<<endl;
 }
+
+int main() {
+    CircularList cll;
+    cll.insertAtLast(3);
+    cll.insertAtLast(4);
+    cll.insertAtFirst(2);
+    cll.insertAtLast(5);
+    cll.insertAtFirst(1);
+    cll.insertAtPosition(1,0);
+    cll.insertAtLast(6);
+    cll.display();
+}
