@@ -19,6 +19,7 @@ class DoublyLinkedList {
     void insertAtLast(int);
     void display();
     void deleteFirst();
+    void deleteLast();
 };
 
 void DoublyLinkedList::insertAtFirst(int v) {
@@ -89,4 +90,26 @@ void DoublyLinkedList::deleteFirst() {
     p->prev = NULL;
     delete q;
 
+}
+
+void DoublyLinkedList::deleteLast() {
+    if (p == NULL) {
+        cout<<"List is empty."<<endl;
+        return;
+    }
+
+    Node*q = p;
+
+    if (p->next == NULL) {
+        p = NULL;
+        delete q;
+        return;
+    }
+
+    while (q->next != NULL) {
+        q = q->next;
+    }
+
+    q->prev->next = NULL;
+    delete q;
 }
