@@ -240,20 +240,71 @@ void SingleLinkedList::insertAtPosition() {
 }
 
 int main() {
+
     SingleLinkedList sll;
-    sll.insertAtStart();
-    sll.insertAtStart();
-    sll.insertAtStart();
-    sll.display();
-    sll.insertAtEnd();
-    sll.insertAtEnd();
-    sll.insertAtEnd();
-    sll.display();
-    sll.search();
-    sll.deleteAtPosition();
-    sll.display();
-    sll.deleteLast();
-    sll.display();
-    sll.deleteFirst();
-    sll.display();
+    int choice;
+
+    do {
+        cout<<"\n========== SINGLY LINKED LIST MENU =========="<<endl;
+
+        cout<<"1. Insert at Start"<<endl;
+        cout<<"2. Insert at End"<<endl;
+        cout<<"3. Insert at Position"<<endl;
+        cout<<"4. Display List"<<endl;
+        cout<<"5. Search Element"<<endl;
+        cout<<"6. Delete First"<<endl;
+        cout<<"7. Delete Last"<<endl;
+        cout<<"8. Delete at Position"<<endl;
+        cout<<"9. Exit"<<endl;
+
+        cout<<"============================================="<<endl;
+
+        cout<<"Enter your choice: ";
+        cin>>choice;
+
+        switch(choice) {
+
+            case 1:
+                sll.insertAtStart();
+                break;
+
+            case 2:
+                sll.insertAtEnd();
+                break;
+
+            case 3:
+                sll.insertAtPosition();
+                break;
+
+            case 4:
+                sll.display();
+                break;
+
+            case 5:
+                sll.search();
+                break;
+
+            case 6:
+                sll.deleteFirst();
+                break;
+
+            case 7:
+                sll.deleteLast();
+                break;
+
+            case 8:
+                sll.deleteAtPosition();
+                break;
+
+            case 9:
+                cout<<"Exiting Program..."<<endl;
+                break;
+
+            default:
+                cout<<"Invalid Choice! Try Again."<<endl;
+        }
+
+    } while(choice != 9);
+
+    return 0;
 }
