@@ -1,5 +1,3 @@
-#include <ostream>
-#include <wchar.h>
 #include <iostream>
 
 class StackList {
