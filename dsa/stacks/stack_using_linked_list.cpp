@@ -1,3 +1,7 @@
+#include <ostream>
+#include <wchar.h>
+#include <iostream>
+
 class StackList {
     struct node {
         int data;
@@ -15,5 +19,15 @@ class StackList {
         t->data = x;
         t->next =p;
         p = t;
+    }
+
+    void pop() {
+        if (p==NULL) {
+            cout<<"Stack Underflow"<<endl();
+            return;
+        }
+        node*q=p;
+        p=p->next;
+        delete q;
     }
 };
