@@ -19,6 +19,7 @@ public:
     void deleteAtPosition();
     void deleteLast();
     void deleteFirst();
+    void insertAtPosition();
 
     //Non-parameterized constructor
     SingleLinkedList() {
@@ -194,6 +195,48 @@ void SingleLinkedList::deleteFirst (){
         p=p->next;
         delete q;
     }
+}
+
+void SingleLinkedList::insertAtPosition() {
+
+    int pos, v;
+
+    cout<<"Enter position: ";
+    cin>>pos;
+    cout<<endl;
+
+    cout<<"Enter value: ";
+    cin>>v;
+    cout<<endl;
+
+    if (pos <= 0) {
+        cout<<"Invalid"<<endl;
+        return;
+    }
+
+    Node*t,*q;
+    t = new Node;
+    t->data = v;
+
+    if (pos == 1) {
+        t->next = p;
+        p = t;
+        return;
+    }
+
+    q = p;
+
+    for (int i = 1; i < pos-1;i++ && q != NULL) {
+        q = q->next;
+    }
+    if (q==NULL) {
+        cout<<"Invalid Position"<<endl;
+        return;
+    }
+
+    t->next = q->next;
+    q->next = t;
+
 }
 
 int main() {
