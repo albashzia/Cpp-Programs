@@ -1,4 +1,7 @@
 #include <wchar.h>
+#include <iostream>
+
+using namespace std;
 
 class QueueList {
     struct node {
@@ -25,5 +28,16 @@ class QueueList {
             rear = q;
             rear->next = NULL;
         }
+    }
+
+    void dequeue() {
+        if (front == NULL) {
+            cout<<"Empty"<<endl;
+            return;
+        }
+        node *r;
+        r = front;
+        front = front->next;
+        delete r;
     }
 };
